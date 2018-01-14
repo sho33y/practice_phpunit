@@ -14,7 +14,7 @@ namespace App;
  */
 class Dollar
 {
-    public $amount;
+    private $amount;
 
     /**
      * Dollar constructor.
