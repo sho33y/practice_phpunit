@@ -3,8 +3,6 @@
 namespace App;
 
 use PHPUnit\Framework\TestCase;
-use Money\Money;
-use Money\Currency;
 
 class MoneyTest extends TestCase
 {
