@@ -35,11 +35,11 @@ class Dollar
     }
 
     /**
-     * @param Object $object
-     * @return boolean
+     * @param Dollar $dollar
+     * @return bool
      */
-    function equals(Dollar $object)
+    function equals(Dollar $dollar)
     {
-        return true;
+        return $this->amount == $dollar->amount;
     }
 }
