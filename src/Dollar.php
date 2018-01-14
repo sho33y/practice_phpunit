@@ -8,17 +8,23 @@
 
 namespace App;
 
+/**
+ * Class Dollar
+ * @package App
+ */
 class Dollar
 {
-    private $amount;
+    public $amount;
 
+    /**
+     * Dollar constructor.
+     * @param int $amount
+     */
     function __construct(int $amount)
     {
-
     }
 
     function times(int $multiplier)
     {
-
     }
 }
