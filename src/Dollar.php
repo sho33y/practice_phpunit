@@ -29,7 +29,7 @@ class Dollar
      * @param int $multiplier
      * @return Dollar
      */
-    public function times(int $multiplier)
+    public function times(int $multiplier) : Dollar
     {
         return new Dollar($this->amount * $multiplier);
     }
@@ -38,7 +38,7 @@ class Dollar
      * @param Dollar $dollar
      * @return bool
      */
-    public function equals(Dollar $dollar)
+    public function equals(Dollar $dollar) : bool
     {
         return $this->amount == $dollar->amount;
     }
