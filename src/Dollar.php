@@ -14,13 +14,13 @@ namespace App;
  */
 class Dollar
 {
-    public $amount;
+    private $amount;
 
     /**
      * Dollar constructor.
      * @param int $amount
      */
-    function __construct(int $amount)
+    public function __construct(int $amount)
     {
         $this->amount = $amount;
     }
@@ -29,7 +29,7 @@ class Dollar
      * @param int $multiplier
      * @return Dollar
      */
-    function times(int $multiplier)
+    public function times(int $multiplier) : Dollar
     {
         return new Dollar($this->amount * $multiplier);
     }
@@ -38,7 +38,7 @@ class Dollar
      * @param Dollar $dollar
      * @return bool
      */
-    function equals(Dollar $dollar)
+    public function equals(Dollar $dollar) : bool
     {
         return $this->amount == $dollar->amount;
     }
