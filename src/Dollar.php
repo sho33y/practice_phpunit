@@ -25,8 +25,21 @@ class Dollar
         $this->amount = $amount;
     }
 
+    /**
+     * @param int $multiplier
+     * @return Dollar
+     */
     function times(int $multiplier)
     {
         return new Dollar($this->amount * $multiplier);
+    }
+
+    /**
+     * @param Dollar $dollar
+     * @return bool
+     */
+    function equals(Dollar $dollar)
+    {
+        return $this->amount == $dollar->amount;
     }
 }
