@@ -17,4 +17,10 @@ class MoneyTest extends TestCase
         $product = $five->times(3);
         self::assertEquals(15, $product->amount);
     }
+
+    public function testEquality()
+    {
+        $product = new Dollar(5);
+        self::assertTrue($product->equals(new Dollar(5)));
+    }
 }
