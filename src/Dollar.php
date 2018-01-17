@@ -12,10 +12,8 @@ namespace App;
  * Class Dollar
  * @package App
  */
-class Dollar
+class Dollar extends Money
 {
-    private $amount;
-
     /**
      * Dollar constructor.
      * @param int $amount
@@ -32,14 +30,5 @@ class Dollar
     public function times(int $multiplier) : Dollar
     {
         return new Dollar($this->amount * $multiplier);
-    }
-
-    /**
-     * @param Dollar $dollar
-     * @return bool
-     */
-    public function equals(Dollar $dollar) : bool
-    {
-        return $this->amount == $dollar->amount;
     }
 }
