@@ -43,4 +43,13 @@ abstract class Money
     {
         return new Dollar($amount);
     }
+
+    /**
+     * @param int $amount
+     * @return Money
+     */
+    public static function franc(int $amount) : Money
+    {
+        return new Franc($amount);
+    }
 }
