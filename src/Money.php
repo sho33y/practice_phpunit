@@ -12,9 +12,18 @@ namespace App;
  * Class Money
  * @package App
  */
-class Money
+abstract class Money
 {
+    /**
+     * @var
+     */
     protected $amount;
+
+    /**
+     * @param int $multiplier
+     * @return mixed
+     */
+    abstract public function times(int $multiplier) : Money;
 
     /**
      * @param Money $money
@@ -24,5 +33,14 @@ class Money
     {
         return $this->amount == $money->amount
             && get_called_class() == get_class($money);
+    }
+
+    /**
+     * @param int $amount
+     * @return Money
+     */
+    public static function dollar(int $amount) : Money
+    {
+        return new Dollar($amount);
     }
 }
