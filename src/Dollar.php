@@ -21,8 +21,7 @@ class Dollar extends Money
      */
     public function __construct(int $amount, string $currency)
     {
-        $this->amount = $amount;
-        $this->currency = $currency;
+        parent::__construct($amount, $currency);
     }
 
     /**
