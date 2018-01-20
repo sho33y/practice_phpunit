@@ -18,6 +18,7 @@ abstract class Money
      * @var
      */
     protected $amount;
+    protected $currency;
 
     /**
      * @param int $multiplier
@@ -28,7 +29,10 @@ abstract class Money
     /**
      * @return string
      */
-    abstract public function currency() : string;
+    public function currency() : string
+    {
+        return $this->currency;
+    }
 
     /**
      * @param Money $money

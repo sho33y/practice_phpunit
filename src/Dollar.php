@@ -21,14 +21,7 @@ class Dollar extends Money
     public function __construct(int $amount)
     {
         $this->amount = $amount;
-    }
-
-    /**
-     * @return string
-     */
-    public function currency() : string
-    {
-        return "USD";
+        $this->currency = "USD";
     }
 
     /**
