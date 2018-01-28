@@ -33,7 +33,7 @@ class Money
 
     /**
      * @param int $multiplier
-     * @return null
+     * @return Money
      */
     public function times(int $multiplier)
     {
