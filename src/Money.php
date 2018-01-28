@@ -12,7 +12,7 @@ namespace App;
  * Class Money
  * @package App
  */
-class Money
+class Money implements Expression
 {
     /**
      * @var
@@ -42,9 +42,9 @@ class Money
 
     /**
      * @param Money $addend
-     * @return Money
+     * @return Expression
      */
-    public function plus(Money $addend) : Money
+    public function plus(Money $addend) : Expression
     {
         return new Money($this->amount + $addend->amount, $this->currency());
     }
