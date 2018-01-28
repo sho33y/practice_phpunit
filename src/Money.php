@@ -12,7 +12,7 @@ namespace App;
  * Class Money
  * @package App
  */
-abstract class Money
+class Money
 {
     /**
      * @var
@@ -33,9 +33,12 @@ abstract class Money
 
     /**
      * @param int $multiplier
-     * @return mixed
+     * @return null
      */
-    abstract public function times(int $multiplier) : Money;
+    public function times(int $multiplier)
+    {
+        return null;
+    }
 
     /**
      * @return string
