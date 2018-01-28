@@ -54,7 +54,7 @@ class Money
      */
     public function equals(Money $money) : bool
     {
-        return $this->amount == $money->amount && $this->currency == $money->currency;
+        return $this->amount === $money->amount && $this->currency() === $money->currency();
     }
 
     public function toString() : string
