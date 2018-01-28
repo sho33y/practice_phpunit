@@ -55,6 +55,11 @@ abstract class Money
             && get_called_class() == get_class($money);
     }
 
+    public function toString() : string
+    {
+        return $this->amount . " " . $this->currency;
+    }
+
     /**
      * @param int $amount
      * @return Money
