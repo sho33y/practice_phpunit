@@ -12,7 +12,7 @@ namespace App;
  * Class Money
  * @package App
  */
-abstract class Money
+class Money
 {
     /**
      * @var
@@ -33,9 +33,12 @@ abstract class Money
 
     /**
      * @param int $multiplier
-     * @return mixed
+     * @return null
      */
-    abstract public function times(int $multiplier) : Money;
+    public function times(int $multiplier)
+    {
+        return new Money($this->amount * $multiplier, $this->currency);
+    }
 
     /**
      * @return string
@@ -51,8 +54,12 @@ abstract class Money
      */
     public function equals(Money $money) : bool
     {
-        return $this->amount == $money->amount
-            && get_called_class() == get_class($money);
+        return $this->amount === $money->amount && $this->currency() === $money->currency();
+    }
+
+    public function toString() : string
+    {
+        return $this->amount . " " . $this->currency;
     }
 
     /**
