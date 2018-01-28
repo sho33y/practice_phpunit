@@ -37,7 +37,7 @@ class Money
      */
     public function times(int $multiplier)
     {
-        return null;
+        return new Money($this->amount * $multiplier, $this->currency);
     }
 
     /**
