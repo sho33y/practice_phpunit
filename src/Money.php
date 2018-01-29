@@ -50,6 +50,14 @@ class Money implements Expression
     }
 
     /**
+     * @return int
+     */
+    public function amount() : int
+    {
+        return $this->amount;
+    }
+
+    /**
      * @return string
      */
     public function currency() : string
