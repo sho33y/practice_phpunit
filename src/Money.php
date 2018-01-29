@@ -42,11 +42,11 @@ class Money implements Expression
 
     /**
      * @param Money $addend
-     * @return Expression
+     * @return Sum
      */
-    public function plus(Money $addend) : Expression
+    public function plus(Money $addend) : Sum
     {
-        return new Money($this->amount + $addend->amount, $this->currency());
+        return new Sum($this, $addend);
     }
 
     /**
