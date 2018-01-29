@@ -17,17 +17,10 @@ class Bank
     /**
      * @param Expression $source
      * @param string $to
-     * @return Sum
+     * @return Money
      */
-    public function reduce(Expression $source, string $to) : Sum
+    public function reduce(Expression $source, string $to) : Money
     {
-        if ($source instanceof Money) {
-            return $source;
-        }
-
-        // PHPではできない
-        // $sum = (Sum)$source;
-        $sum = $source;
-        return $sum->reduce($to);
+        return $source->reduce($to);
     }
 }
