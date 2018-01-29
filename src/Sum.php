@@ -9,7 +9,7 @@
 namespace App;
 
 
-class Sum
+class Sum implements Expression
 {
     /**
      * @var Money
