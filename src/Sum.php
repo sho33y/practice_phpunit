@@ -20,4 +20,14 @@ class Sum
      * @var Money
      */
     public $addend;
+
+    /**
+     * Sum constructor.
+     * @param Money $augend
+     * @param Money $addend
+     */
+    public function __construct(Money $augend, Money $addend)
+    {
+
+    }
 }
