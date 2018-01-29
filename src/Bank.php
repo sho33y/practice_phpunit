@@ -21,6 +21,10 @@ class Bank
      */
     public function reduce(Expression $source, string $to) : Sum
     {
+        if ($source instanceof Money) {
+            return $source;
+        }
+
         // PHPではできない
         // $sum = (Sum)$source;
         $sum = $source;
