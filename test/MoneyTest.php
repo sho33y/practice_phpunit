@@ -54,7 +54,9 @@ class MoneyTest extends TestCase
     {
         $five = Money::dollar(5);
         $result = $five->plus($five);
-        $sum = (Sum) $result;
+        // PHPはできない
+        // $sum = (Sum) $result;
+        $sum = $result;
         $this->assertEquals($five, $sum->augend);
         $this->assertEquals($five, $sum->addend);
     }
