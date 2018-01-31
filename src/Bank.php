@@ -15,6 +15,12 @@ namespace App;
 class Bank
 {
     /**
+     * PHPはHashMapが存在しないので連想配列を使用する
+     * @var []
+     */
+    private $rates = [];
+
+    /**
      * @param Expression $source
      * @param string $to
      * @return Money
@@ -31,6 +37,10 @@ class Bank
      */
     public function addRate(string $from, string $to, int $rate)
     {
+        // PHPではJavaのHashMapのような記述ができない
+        // $this->rates[new Pair($from, $to)] = $rate;
+        // とりあえず、$from_$toで代用した
+        $this->rates[$from . '_' . $to] = $rate;
     }
 
     /**
