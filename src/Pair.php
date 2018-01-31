@@ -31,4 +31,22 @@ class Pair
         $this->from = $from;
         $this->to = $to;
     }
+
+    /**
+     * @param Pair $object
+     * @return bool
+     */
+    public function equals(Pair $object) : bool
+    {
+        $pair = new Pair($object->from, $object->to);
+        return ($this->from == $pair->from && $this->to == $pair->to);
+    }
+
+    /**
+     * @return int
+     */
+    public function hashCode() : int
+    {
+        return 0;
+    }
 }
