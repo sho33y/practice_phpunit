@@ -12,21 +12,21 @@ namespace App;
 class Sum implements Expression
 {
     /**
-     * @var Money
+     * @var Expression
      */
     public $augend;
 
     /**
-     * @var Money
+     * @var Expression
      */
     public $addend;
 
     /**
      * Sum constructor.
-     * @param Money $augend
-     * @param Money $addend
+     * @param Expression $augend
+     * @param Expression $addend
      */
-    public function __construct(Money $augend, Money $addend)
+    public function __construct(Expression $augend, Expression $addend)
     {
         $this->augend = $augend;
         $this->addend = $addend;
