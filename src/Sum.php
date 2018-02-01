@@ -33,6 +33,15 @@ class Sum implements Expression
     }
 
     /**
+     * @param Expression $addend
+     * @return Sum
+     */
+    public function plus(Expression $addend) : Sum
+    {
+        return null;
+    }
+
+    /**
      * @param Bank $bank
      * @param string $to
      * @return Money
