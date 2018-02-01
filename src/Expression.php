@@ -15,6 +15,12 @@ namespace App;
 interface Expression
 {
     /**
+     * @param Expression $added
+     * @return Sum
+     */
+    public function plus(Expression $addend) : Sum;
+
+    /**
      * @param Bank $bank
      * @param string $to
      * @return Money

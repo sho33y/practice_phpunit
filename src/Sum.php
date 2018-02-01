@@ -12,24 +12,33 @@ namespace App;
 class Sum implements Expression
 {
     /**
-     * @var Money
+     * @var Expression
      */
     public $augend;
 
     /**
-     * @var Money
+     * @var Expression
      */
     public $addend;
 
     /**
      * Sum constructor.
-     * @param Money $augend
-     * @param Money $addend
+     * @param Expression $augend
+     * @param Expression $addend
      */
-    public function __construct(Money $augend, Money $addend)
+    public function __construct(Expression $augend, Expression $addend)
     {
         $this->augend = $augend;
         $this->addend = $addend;
+    }
+
+    /**
+     * @param Expression $addend
+     * @return Sum
+     */
+    public function plus(Expression $addend) : Sum
+    {
+        return null;
     }
 
     /**
@@ -39,7 +48,7 @@ class Sum implements Expression
      */
     public function reduce(Bank $bank, string $to) : Money
     {
-        $amount = $this->augend->amount() + $this->addend->amount();
+        $amount = $this->augend->reduce($bank, $to)->amount() + $this->addend->reduce($bank, $to)->amount();
         return new Money($amount, $to);
     }
 }
