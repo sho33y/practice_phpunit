@@ -34,9 +34,9 @@ class Sum implements Expression
 
     /**
      * @param Expression $addend
-     * @return Sum
+     * @return Sum|null
      */
-    public function plus(Expression $addend) : Sum
+    public function plus(Expression $addend) : ?Sum
     {
         return null;
     }
