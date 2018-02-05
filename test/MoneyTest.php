@@ -128,6 +128,9 @@ class MoneyTest extends TestCase
         $this->assertEquals(Money::dollar(15), $result);
     }
 
+    /**
+     * @test
+     */
     public function testSumTimes()
     {
         $fiveBusks = Money::dollar(5);
