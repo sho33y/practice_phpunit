@@ -15,10 +15,16 @@ namespace App;
 interface Expression
 {
     /**
-     * @param Expression $addend
-     * @return Sum|null
+     * @param int $multiplier
+     * @return Expression
      */
-    public function plus(Expression $addend) : ?Sum;
+    public function times(int $multiplier) : Expression;
+
+    /**
+     * @param Expression $addend
+     * @return Expression
+     */
+    public function plus(Expression $addend) : Expression;
 
     /**
      * @param Bank $bank

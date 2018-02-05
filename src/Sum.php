@@ -33,12 +33,21 @@ class Sum implements Expression
     }
 
     /**
-     * @param Expression $addend
-     * @return Sum|null
+     * @param int $multiplier
+     * @return Expression
      */
-    public function plus(Expression $addend) : ?Sum
+    public function times(int $multiplier) : Expression
     {
-        return null;
+        return new Sum($this->augend->times($multiplier), $this->addend->times($multiplier));
+    }
+
+    /**
+     * @param Expression $addend
+     * @return Expression
+     */
+    public function plus(Expression $addend) : Expression
+    {
+        return new Sum($this, $addend);
     }
 
     /**

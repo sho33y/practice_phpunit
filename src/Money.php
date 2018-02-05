@@ -42,9 +42,9 @@ class Money implements Expression
 
     /**
      * @param Expression $addend
-     * @return Sum|null
+     * @return Expression
      */
-    public function plus(Expression $addend) : ?Sum
+    public function plus(Expression $addend) : Expression
     {
         return new Sum($this, $addend);
     }
