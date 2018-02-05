@@ -38,7 +38,7 @@ class Sum implements Expression
      */
     public function plus(Expression $addend) : ?Sum
     {
-        return null;
+        return new Sum($this, $addend);
     }
 
     /**
